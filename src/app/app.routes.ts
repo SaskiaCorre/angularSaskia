@@ -10,3 +10,4 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'list-friends', component: ListFriendsComponent },
   ];
+
