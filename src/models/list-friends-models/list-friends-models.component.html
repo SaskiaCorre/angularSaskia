@@ -1,0 +1,19 @@
+<h1>List Friends (ngModel : 2 Ways Binding)</h1>
+    <!-- <input (input)="onUpdateFriendsList($event)" type="text" class="form-control w-50 m-auto" placeholder="Nom Ami" aria-label="Username" > -->
+    <input [(ngModel)]="friendName" type="text" placeholder="Nom Ami" aria-label="Username">
+    <!-- <p>{{/friendName}}</p> -->
+    <p>Test avec un input nombre</p>
+    <input [(ngModel)]="friendsNumberInput" type="number" placeholder="Num Fétiche Ami" aria-label="Number">
+    <p>{{friendsNumberInput}}</p>
+    <p>{{friendsCreationStatus}}</p>
+    <button (click)="onAddingFriends()" [disabled]="listFriendsAuth">Ajouter Ami</button>
+    <input type="text" (input)="onUpdateFriendName($event)"> 
+<hr>
+<h1>Sans ngModel</h1> 
+<input type="text" placeholder="Nom Ami" aria-label="Username">
+<!--<h2>{{/friendName}}</h2>-->
+<button (click)="onAddingFriends()" [disabled]="!listFriendsAuth">Ajouter Ami</button> 
+<p>{{friendsCreationStatus}}</p> 
+<h2>La liste des copains :</h2>
+  <app-one-friend></app-one-friend>
+ 

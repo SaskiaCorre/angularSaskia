@@ -1,0 +1,11 @@
+<div class="un-ami">
+    <img [src]="oneFriendImg" [alt]="oneFriendName">
+    <div [ngStyle]="{backgroundColor: getColor()}" class="card-body"></div>
+    <h3 [ngClass]="{friendOn:oneFriendStyle ==='ON', friendOff:oneFriendStyle==='OFF'}" class="card-title">{{oneFriendName}}</h3>
+    <p>Age : {{oneFriendAge}}</p>
+    <p>Bio : {{oneFriendBio}}</p>
+    <p>Hobbies :</p>
+        <p>{{oneFriendHobbies[0]}}</p>
+        <p>{{oneFriendHobbies[1]}}</p>
+        <p>{{oneFriendHobbies[2]}}</p>    
+</div>

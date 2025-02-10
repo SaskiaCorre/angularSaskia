@@ -1,0 +1,22 @@
+<h1>List Friends (*ngIf : Conditional Rendering)</h1>
+    <input [(ngModel)]="friendsInputText" type="text" placeholder="Nom Ami" name="">
+    <input type="button" value="valider" (click)="onCreationFriends()">
+
+    <p>{{friendsInputText}}</p>
+    <p *ngIf="friendsCreated==true;else noFriends">{{friendsCreationStatus}}</p>
+    <ng-template #noFriends>
+      <p>Aucun Ami... Dommage!</p>
+    </ng-template>
+
+<h1>List Friends (*ngFor : List Rendering)</h1>
+    <p *ngFor="let item of ['truc','bidule','machin','superman']; let i=index">L'index {{i}} - mon ami X</p> 
+  <button (click)="onCreationFriends()" [disabled]="listFriendsAuth">Ajouter Ami</button>
+  <div>
+  
+    <div>
+      <app-one-friend *ngFor="let friend of myFriends; let i = index"></app-one-friend>
+    </div>
+
+    <button (click)="onCreationFriends()" [disabled]="listFriendsAuth">Ajouter Ami</button>
+
+

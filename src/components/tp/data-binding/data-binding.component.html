@@ -1,0 +1,7 @@
+<h1>TP-1 : Binding System</h1>
+  <label>Nom de l'utilisateur</label>
+  <input type="text" [(ngModel)]="userName">
+  <p>{{userName}}</p>
+  <button [disabled]="!userName" (click)="resetUsername()">Reset input</button>         
+  <br/>
+  <button (click)="resetUsername()">Reset input</button>
